@@ -1,4 +1,6 @@
-package Isklyucheniya_v_programmirovanii.Seminar_3;
+package Isklyucheniya_v_programmirovanii.Seminar_3.Task_1;
+import Isklyucheniya_v_programmirovanii.Seminar_3.Task_1.CalculationException;
+
 import java.util.Scanner;
 
 /*

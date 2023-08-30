@@ -13,7 +13,7 @@ package Algorithms;
  */
 public class Main {
     public static void main(String[] args) {
-        Node initialNode = new Node(15, null, null);
+        Node initialNode = new Node(10, null, null);
         Tree tree1 = new Tree(initialNode);
 
         System.out.println(initialNode);

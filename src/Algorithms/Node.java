@@ -28,6 +28,15 @@ public class Node {
         return res;
     }
 }
+
+
+
+
+
+
+
+
+
 /*
 public class Tree {
     Node root;
@@ -66,8 +75,8 @@ public class Tree {
 //  public void printTree() {}
 
 }
-        */
-/*
+
+
     public static void main(String[] args) {
         Node initialNode = new Node(15, null, null);
         Tree tree1 = new Tree(initialNode);
