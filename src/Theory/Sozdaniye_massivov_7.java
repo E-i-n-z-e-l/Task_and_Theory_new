@@ -41,4 +41,5 @@ public class Sozdaniye_massivov_7 {
  * String[] arrayTwo = {"один", "два", "три"};
  * double[] arrayTree = {1.0, 2.0, 3.0, 4.0};
  * boolean[] arrayFour = {true, false, true, false, true, false};
+ * char[] arrayFive = {'a', 'b', 'c', 'd', 'e', 'f', 'g'};
  */
