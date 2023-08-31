@@ -1,6 +1,6 @@
 package Theory;
 
-public class ObkhodElementovVTsikle {
+public class ObkhodElementovVTsikle_9 {
     public static void main(String[] args) {
         String[] htm = { "HTML5", "in", "easy", "steps" } ;
         int j = 0 ;
