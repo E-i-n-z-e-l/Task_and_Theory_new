@@ -1,4 +1,4 @@
-package Tasks;
+package Tasks.MatematicTask;
 import java.util.Scanner;
 /*
 	Даны действительные числа X и Y. Получить: (|x| - |y|)  /  (1 + (|x| * |y|))

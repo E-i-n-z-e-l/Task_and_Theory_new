@@ -1,4 +1,4 @@
-package Tasks;
+package Tasks.MatematicTask;
 /*
 Найти сумму, произведение и разность двух чисел
  */

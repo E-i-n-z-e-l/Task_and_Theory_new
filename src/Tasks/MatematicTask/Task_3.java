@@ -1,4 +1,4 @@
-package Tasks;
+package Tasks.MatematicTask;
 import java.util.Scanner;
 /*
 Дана длина ребра куба. Найти объем куба и площадь его боковой поверхности.

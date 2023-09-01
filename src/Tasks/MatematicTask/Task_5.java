@@ -1,4 +1,4 @@
-package Tasks;
+package Tasks.MatematicTask;
 import java.util.Scanner;
 /*
 Даны два действительных числа. Найти среднее
