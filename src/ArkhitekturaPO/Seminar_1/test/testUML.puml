@@ -1,0 +1,114 @@
+@startuml
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.Student {
+- String name
++ int age
+# String id
++ void study()
+# void takeExam()
+- void sleep()
++ {static} void staticMethod()
++ String toString()
+}
+interface ArkhitekturaPO.Seminar_1.test.additionalInformation.testElement.Drivable {
+~ void drive()
+}
+abstract class ArkhitekturaPO.Seminar_1.test.additionalInformation.testElement.Vehicle {
+~ String make
+~ {abstract}void start()
+}
+enum ArkhitekturaPO.Seminar_1.test.additionalInformation.testElement.FuelType {
++  PETROL
++  DIESEL
++  ELECTRIC
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testElement.ElectricCar {
+~ int batteryLife
+~ void charge()
+~ void start()
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testElement.Main {
++ {static} void main(String[])
+}
+interface ArkhitekturaPO.Seminar_1.test.additionalInformation.Payable {
+~ void payTuition()
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.CollegeStudent {
+~ String collegeName
++ void payTuition()
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.Main {
++ {static} void main(String[])
+}
+abstract class ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnection.Animal {
+~ void breathe()
+}
+interface ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnection.Eatable {
+~ void eat()
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnection.Mammal {
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnection.Human {
+~ Cat petCat
++ void eat()
+~ void ownCat(Cat)
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnection.Cat {
+~ void meow()
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnection.House {
+~ Room room
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnection.Room {
+~ void description()
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnection.Main {
++ {static} void main(String[])
+}
+abstract class ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnectionTwo.Animal {
+~ void breathe()
+}
+interface ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnectionTwo.Eatable {
+~ void eat()
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnectionTwo.Mammal {
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnectionTwo.Human {
+~ Cat petCat
++ void eat()
+~ void ownCat(Cat)
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnectionTwo.Cat {
+~ void meow()
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnectionTwo.House {
+~ Room room
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnectionTwo.Room {
+~ void description()
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnectionTwo.Main {
++ {static} void main(String[])
+}
+class ArkhitekturaPO.Seminar_1.test.additionalInformation.testElement.Car {
+~ FuelType fuelType
+- int speed
++ String color
++ void accelerate()
++ void brake()
++ void drive()
+~ void start()
+}
+
+
+ArkhitekturaPO.Seminar_1.test.additionalInformation.testElement.Car <|-- ArkhitekturaPO.Seminar_1.test.additionalInformation.testElement.ElectricCar
+ArkhitekturaPO.Seminar_1.test.additionalInformation.Payable <|.. ArkhitekturaPO.Seminar_1.test.additionalInformation.CollegeStudent
+ArkhitekturaPO.Seminar_1.test.additionalInformation.Student <|-- ArkhitekturaPO.Seminar_1.test.additionalInformation.CollegeStudent
+ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnection.Animal <|-- ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnection.Mammal
+ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnection.Eatable <|.. ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnection.Human
+ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnection.Mammal <|-- ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnection.Human
+ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnectionTwo.Animal <|-- ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnectionTwo.Mammal
+ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnectionTwo.Eatable <|.. ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnectionTwo.Human
+ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnectionTwo.Mammal <|-- ArkhitekturaPO.Seminar_1.test.additionalInformation.testConnectionTwo.Human
+ArkhitekturaPO.Seminar_1.test.additionalInformation.testElement.Drivable <|.. ArkhitekturaPO.Seminar_1.test.additionalInformation.testElement.Car
+ArkhitekturaPO.Seminar_1.test.additionalInformation.testElement.Vehicle <|-- ArkhitekturaPO.Seminar_1.test.additionalInformation.testElement.Car
+@enduml
