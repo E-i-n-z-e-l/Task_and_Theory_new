@@ -1,0 +1,107 @@
+@startuml
+abstract class ArkhitekturaPO.Practical_1.warriors.Warrior {
+- String name
+- int healthPoint
+- W weapon
+- P protection
++ String getName()
++ int getHealthPoint()
++ W getWeapon()
++ P getProtection()
++ int defense()
++ void setHealthPoint(int)
++ void setWeapon(W)
++ int hit()
++ void reduceHealth(int,int)
++ String toString()
+}
+class ArkhitekturaPO.Practical_1.weapons.shields.KnightShield {
++ int blockDamage()
++ String toString()
+}
+interface ArkhitekturaPO.Practical_1.weapons.meleeWeapon.Melee {
+}
+interface ArkhitekturaPO.Practical_1.weapons.Weapon {
+~ int damage()
+}
+class ArkhitekturaPO.Practical_1.weapons.shields.NotShield {
++ int blockDamage()
++ String toString()
+}
+class ArkhitekturaPO.Practical_1.weapons.rangedWeapon.Bow {
++ int damage()
++ int distance()
++ String toString()
+}
+class ArkhitekturaPO.Practical_1.Team {
+- List<T> team
++ void add(T)
++ Iterator<T> iterator()
++ int getTeamHealth()
++ int maxAttackDistance()
++ int getTeamAttack()
++ int getTeamDefense()
++ int getMinShield()
++ String toString()
+}
+class ArkhitekturaPO.Practical_1.weapons.meleeWeapon.Axe {
++ int damage()
++ String toString()
+}
+class ArkhitekturaPO.Practical_1.warriors.Archer {
++ int distance()
++ String toString()
+}
+class ArkhitekturaPO.Practical_1.Battle {
+- Warrior w1
+- Warrior w2
++ void fight()
+}
+class ArkhitekturaPO.Practical_1.weapons.meleeWeapon.Sword {
++ int damage()
++ String toString()
+}
+class ArkhitekturaPO.Practical_1.Main {
++ {static} void main(String[])
+}
+class ArkhitekturaPO.Practical_1.weapons.shields.RoundShield {
++ int blockDamage()
++ String toString()
+}
+class ArkhitekturaPO.Practical_1.warriors.Infantryman {
++ String toString()
+}
+interface ArkhitekturaPO.Practical_1.weapons.Protection {
+~ int blockDamage()
+}
+interface ArkhitekturaPO.Practical_1.weapons.rangedWeapon.Ranged {
+~ int distance()
+}
+interface ArkhitekturaPO.Practical_1.weapons.shields.Def {
+}
+class ArkhitekturaPO.Practical_1.weapons.shields.HeavyShield {
++ int blockDamage()
++ String toString()
+}
+class ArkhitekturaPO.Practical_1.weapons.rangedWeapon.CrossBow {
++ int damage()
++ int distance()
++ String toString()
+}
+
+
+ArkhitekturaPO.Practical_1.weapons.Protection <|.. ArkhitekturaPO.Practical_1.weapons.shields.KnightShield
+ArkhitekturaPO.Practical_1.weapons.Weapon <|-- ArkhitekturaPO.Practical_1.weapons.meleeWeapon.Melee
+ArkhitekturaPO.Practical_1.weapons.shields.Def <|.. ArkhitekturaPO.Practical_1.weapons.shields.NotShield
+ArkhitekturaPO.Practical_1.weapons.rangedWeapon.Ranged <|.. ArkhitekturaPO.Practical_1.weapons.rangedWeapon.Bow
+ArkhitekturaPO.Practical_1.Iterable <|.. ArkhitekturaPO.Practical_1.Team
+ArkhitekturaPO.Practical_1.weapons.meleeWeapon.Melee <|.. ArkhitekturaPO.Practical_1.weapons.meleeWeapon.Axe
+ArkhitekturaPO.Practical_1.warriors.Warrior <|-- ArkhitekturaPO.Practical_1.warriors.Archer
+ArkhitekturaPO.Practical_1.weapons.meleeWeapon.Melee <|.. ArkhitekturaPO.Practical_1.weapons.meleeWeapon.Sword
+ArkhitekturaPO.Practical_1.weapons.Protection <|.. ArkhitekturaPO.Practical_1.weapons.shields.RoundShield
+ArkhitekturaPO.Practical_1.warriors.Warrior <|-- ArkhitekturaPO.Practical_1.warriors.Infantryman
+ArkhitekturaPO.Practical_1.weapons.Weapon <|-- ArkhitekturaPO.Practical_1.weapons.rangedWeapon.Ranged
+ArkhitekturaPO.Practical_1.weapons.Protection <|-- ArkhitekturaPO.Practical_1.weapons.shields.Def
+ArkhitekturaPO.Practical_1.weapons.Protection <|.. ArkhitekturaPO.Practical_1.weapons.shields.HeavyShield
+ArkhitekturaPO.Practical_1.weapons.rangedWeapon.Ranged <|.. ArkhitekturaPO.Practical_1.weapons.rangedWeapon.CrossBow
+@enduml
