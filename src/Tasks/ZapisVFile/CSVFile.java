@@ -1,7 +1,5 @@
 package Tasks.ZapisVFile;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class CSVFile {
@@ -40,5 +38,26 @@ public class CSVFile {
         }
 
         System.out.println("Данные успешно записаны в файл.");
+        readCSVFile("contacts.csv");
+    }
+    public static void readCSVFile(String csvFile) {
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new FileReader(csvFile));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (reader != null) {
+                    reader.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
