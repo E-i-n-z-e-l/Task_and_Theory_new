@@ -1,0 +1,27 @@
+@startuml
+class ArkhitekturaPO.Practical_3.ISP.Main {
++ {static} void main(String[])
+}
+class ArkhitekturaPO.Practical_3.ISP.MultiFunctionDevice {
++ void print()
++ void scan()
+}
+interface ArkhitekturaPO.Practical_3.ISP.Scanner {
+~ void scan()
+}
+class ArkhitekturaPO.Practical_3.ISP.SimplePrinter {
++ void print()
+}
+class ArkhitekturaPO.Practical_3.ISP.SimpleScanner {
++ void scan()
+}
+interface ArkhitekturaPO.Practical_3.ISP.Printer {
+~ void print()
+}
+
+
+ArkhitekturaPO.Practical_3.ISP.Printer <|.. ArkhitekturaPO.Practical_3.ISP.MultiFunctionDevice
+ArkhitekturaPO.Practical_3.ISP.Scanner <|.. ArkhitekturaPO.Practical_3.ISP.MultiFunctionDevice
+ArkhitekturaPO.Practical_3.ISP.Printer <|.. ArkhitekturaPO.Practical_3.ISP.SimplePrinter
+ArkhitekturaPO.Practical_3.ISP.Scanner <|.. ArkhitekturaPO.Practical_3.ISP.SimpleScanner
+@enduml

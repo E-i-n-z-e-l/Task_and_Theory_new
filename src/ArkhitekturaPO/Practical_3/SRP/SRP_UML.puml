@@ -1,0 +1,6 @@
+@startuml
+class ArkhitekturaPO.Practical_3.SRP.FileHandler {
++ List<String> readFromFile(String)
++ void writeToFile(String,List<String>)
+}
+@enduml

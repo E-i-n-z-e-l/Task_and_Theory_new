@@ -1,0 +1,19 @@
+@startuml
+abstract class ArkhitekturaPO.Practical_3.LSP.Animal {
++ {abstract}void makeSound()
+}
+class ArkhitekturaPO.Practical_3.LSP.Cat {
++ void makeSound()
+}
+class ArkhitekturaPO.Practical_3.LSP.Dog {
++ void makeSound()
+}
+class ArkhitekturaPO.Practical_3.LSP.Main {
++ {static} void main(String[])
++ {static} void makeAnimalSound(Animal)
+}
+
+
+ArkhitekturaPO.Practical_3.LSP.Animal <|-- ArkhitekturaPO.Practical_3.LSP.Cat
+ArkhitekturaPO.Practical_3.LSP.Animal <|-- ArkhitekturaPO.Practical_3.LSP.Dog
+@enduml

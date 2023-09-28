@@ -1,0 +1,23 @@
+@startuml
+class ArkhitekturaPO.Practical_3.DIP.DataManager {
+- DataSource dataSource
++ void setDataSource(DataSource)
++ String fetchData()
+}
+class ArkhitekturaPO.Practical_3.DIP.Database {
++ String getData()
+}
+class ArkhitekturaPO.Practical_3.DIP.File {
++ String getData()
+}
+interface ArkhitekturaPO.Practical_3.DIP.DataSource {
+~ String getData()
+}
+class ArkhitekturaPO.Practical_3.DIP.Main {
++ {static} void main(String[])
+}
+
+
+ArkhitekturaPO.Practical_3.DIP.DataSource <|.. ArkhitekturaPO.Practical_3.DIP.Database
+ArkhitekturaPO.Practical_3.DIP.DataSource <|.. ArkhitekturaPO.Practical_3.DIP.File
+@enduml

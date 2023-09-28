@@ -1,0 +1,22 @@
+@startuml
+interface ArkhitekturaPO.Practical_3.Phonebook.ContactWriter {
+~ void writeContact(String,String,String)
+}
+class ArkhitekturaPO.Practical_3.Phonebook.CSVContactWriter {
+- String csvFile
++ void writeContact(String,String,String)
+}
+interface ArkhitekturaPO.Practical_3.Phonebook.ContactReader {
+~ void readContacts(String)
+}
+class ArkhitekturaPO.Practical_3.Phonebook.CSVContactReader {
++ void readContacts(String)
+}
+class ArkhitekturaPO.Practical_3.Phonebook.Main {
++ {static} void main(String[])
+}
+
+
+ArkhitekturaPO.Practical_3.Phonebook.ContactWriter <|.. ArkhitekturaPO.Practical_3.Phonebook.CSVContactWriter
+ArkhitekturaPO.Practical_3.Phonebook.ContactReader <|.. ArkhitekturaPO.Practical_3.Phonebook.CSVContactReader
+@enduml

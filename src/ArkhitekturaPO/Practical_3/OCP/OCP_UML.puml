@@ -1,0 +1,23 @@
+@startuml
+class ArkhitekturaPO.Practical_3.OCP.Main {
++ {static} void main(String[])
+}
+abstract class ArkhitekturaPO.Practical_3.OCP.Shape {
++ {abstract}void draw()
+}
+class ArkhitekturaPO.Practical_3.OCP.ShapeDrawer {
+- List<Shape> shapes
++ void addShape(Shape)
++ void drawAllShapes()
+}
+class ArkhitekturaPO.Practical_3.OCP.Circle {
++ void draw()
+}
+class ArkhitekturaPO.Practical_3.OCP.Rectangle {
++ void draw()
+}
+
+
+ArkhitekturaPO.Practical_3.OCP.Shape <|-- ArkhitekturaPO.Practical_3.OCP.Circle
+ArkhitekturaPO.Practical_3.OCP.Shape <|-- ArkhitekturaPO.Practical_3.OCP.Rectangle
+@enduml
