@@ -18,7 +18,7 @@ interface TicketActions {
 
 ' Классы и операции
 
-' класс, представляющий пользователя системы.
+'' Класс, представляющий пользователя системы.
 class User implements UserActions {
 ' предусловие -->
   +authorize(username: String, password: String): boolean
