@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(150, 100, 100);
+}
+
+h1 {
+    text-align: center; /* выравниваем заголовок по центру */
+    font-size: 45px;
+    color: red;
+}
+
+h2 {
+    text-align: center; /* выравниваем заголовок по центру */
+    font-size: 40px;
+}
+
+p {
+    font-size: 30px; /* изменяем размер шрифта на 20 пикселей */
+    text-align: center; /* выравниваем текст по центру */
+}
+
+ol li {
+    font-size: 30px; /* изменяем размер шрифта на 16 пикселей */
+}
