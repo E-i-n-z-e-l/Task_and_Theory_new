@@ -5,6 +5,15 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class CSVContactReader implements ContactReader{
+    /**
+     * <p>
+     *     Метод readContacts: читает контакты из файла и выводит их на экран. Принимает имя файла.
+     * <p>
+     * @return Метод readContacts не возвращает значения (void).
+     * @pre Для работы метода readContacts является передача корректного имени файла.
+     * @post Успешное чтение контактов из файла и вывод на экран.
+     * @param csvFile
+     */
     @Override
     public void readContacts(String csvFile) {
         BufferedReader reader = null;

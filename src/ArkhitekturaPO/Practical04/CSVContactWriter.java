@@ -9,6 +9,21 @@ public class CSVContactWriter implements ContactWriter{
     public CSVContactWriter(String csvFile) {
         this.csvFile = csvFile;
     }
+
+    /**
+     * <p>
+     *  - Конструктор CSVContactWriter: принимает имя файла, в который будут записываться контакты.
+     *  <p>
+     *  <p>
+     * - Метод writeContact: записывает новый контакт в файл. Принимает имя, фамилию и номер телефона контакта.
+     * <p>
+     * @return Метод writeContact не возвращает значения (void).
+     * @pre Для работы метода writeContact является передача корректных данных (имя, фамилия и номер телефона).
+     * @post  Успешная запись контакта в файл.
+     * @param name
+     * @param surname
+     * @param phone
+     */
     @Override
     public void writeContact(String name, String surname, String phone) {
         FileWriter writer = null;
