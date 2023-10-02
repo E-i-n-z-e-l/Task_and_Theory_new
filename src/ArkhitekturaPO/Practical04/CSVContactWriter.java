@@ -1,4 +1,4 @@
-package ArkhitekturaPO.Practical_3.Phonebook;
+package ArkhitekturaPO.Practical04;
 
 import java.io.File;
 import java.io.FileWriter;

@@ -1,6 +1,5 @@
-package ArkhitekturaPO.Practical_3.Phonebook;
+package ArkhitekturaPO.Practical04;
 
-import java.util.List;
 import java.util.Scanner;
 
 /**
