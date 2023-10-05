@@ -1,0 +1,110 @@
+@startuml
+class ArkhitekturaPO.Practocal.Practical05.FishAndCancer.Lighting.OutputLight.AquariumLighting {
++ String light() : класс вывода освещения аквариума
+}
+class ArkhitekturaPO.Practocal.Practical05.FishAndCancer.MainAquarium {
++ {static} void main(String[]) : класс Main
+}
+class ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Predators.MarbleCancer {
++ String light()
++ String sizeFish()
++ String toString()
++ int getSwimSpeed()
++ int getRunSpeed()
+}
+class ArkhitekturaPO.Practocal.Practical05.FishAndCancer.SpeedOfMarineAnimals.Floating.SpeedSwim {
+- List<FishAndMarineArthropods> aquarium
++ List<SwimSpeed> swimmers()
++ SwimSpeed getSwimmerChampion()
+}
+abstract class ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.FishAndMarineArthropods {
+# String name
++ {abstract}String feed()
++ {abstract}String sizeFish()
++ {abstract}String light()
++ String toString()
+}
+
+class ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Herbivores.Herbivor.GuppyFish {
++ String light()
++ String sizeFish()
++ String toString()
++ int getSwimSpeed()
++ int getRunSpeed()
+}
+
+class ArkhitekturaPO.Practocal.Practical05.FishAndCancer.Lighting.LightInAquarium.LightMethods {
+- AquariumLighting aqualight
+- List<FishAndMarineArthropods> aquarium
+- List<Lightable> getLightable()
++ String getLight()
+}
+abstract class ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Herbivores.Herbivorous {
++ String feed()
+}
+
+class ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Predators.AngelFish {
++ String light()
++ String sizeFish()
++ String toString()
++ int getSwimSpeed()
++ int getRunSpeed()
+}
+
+class ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Predators.CancerMini {
++ String light()
++ String sizeFish()
++ String toString()
++ int getSwimSpeed()
++ int getRunSpeed()
+}
+class ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AddAnAnimal.AnimalAdd {
+- List<FishAndMarineArthropods> Aqwa
++ AnimalAdd AddFish(FishAndMarineArthropods)
++ String toString()
+}
+abstract class ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Carnivorous {
++ String feed()
+}
+class ArkhitekturaPO.Practocal.Practical05.FishAndCancer.SpeedOfMarineAnimals.RunningTheBottom.RunBottom {
+- List<FishAndMarineArthropods> aquariumBottom
++ List<Bottomrunning> runners()
++ Bottomrunning getRunnerChampion()
+}
+
+' Интерфейсы
+interface ArkhitekturaPO.Practocal.Practical05.FishAndCancer.SpeedOfMarineAnimals.Floating.SwimSpeed {
+~ int getSwimSpeed() : интерфейс получения скорости плавания
+}
+
+interface ArkhitekturaPO.Practocal.Practical05.FishAndCancer.Lighting.LightInAquarium.AquariumLightingInterface {
+~ String getLight() : интерфейс получения и вывода света в аквариуме
+}
+
+interface ArkhitekturaPO.Practocal.Practical05.FishAndCancer.Lighting.OutputLight.Lightable {
+~ String light() : интерфейс оповещения о работе света в аквариуме
+}
+
+interface ArkhitekturaPO.Practocal.Practical05.FishAndCancer.SpeedOfMarineAnimals.RunningTheBottom.Bottomrunning {
+~ int getRunSpeed() : интерфейс получения скорости хождения по дну
+}
+
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.Lighting.OutputLight.Lightable <|.. ArkhitekturaPO.Practocal.Practical05.FishAndCancer.Lighting.OutputLight.AquariumLighting
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.SpeedOfMarineAnimals.Floating.SwimSpeed <|.. ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Predators.MarbleCancer
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.SpeedOfMarineAnimals.RunningTheBottom.Bottomrunning <|.. ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Predators.MarbleCancer
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Carnivorous <|-- ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Predators.MarbleCancer
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.Lighting.OutputLight.Lightable <|.. ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.FishAndMarineArthropods
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.SpeedOfMarineAnimals.Floating.SwimSpeed <|.. ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Herbivores.Herbivor.GuppyFish
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.SpeedOfMarineAnimals.RunningTheBottom.Bottomrunning <|.. ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Herbivores.Herbivor.GuppyFish
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Herbivores.Herbivorous <|-- ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Herbivores.Herbivor.GuppyFish
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.Lighting.LightInAquarium.AquariumLightingInterface <|.. ArkhitekturaPO.Practocal.Practical05.FishAndCancer.Lighting.LightInAquarium.LightMethods
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.FishAndMarineArthropods <|-- ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Herbivores.Herbivorous
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.SpeedOfMarineAnimals.Floating.SwimSpeed <|.. ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Predators.AngelFish
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.SpeedOfMarineAnimals.RunningTheBottom.Bottomrunning <|.. ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Predators.AngelFish
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Carnivorous <|-- ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Predators.AngelFish
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.SpeedOfMarineAnimals.Floating.SwimSpeed <|.. ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Predators.CancerMini
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.SpeedOfMarineAnimals.RunningTheBottom.Bottomrunning <|.. ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Predators.CancerMini
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Carnivorous <|-- ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Predators.CancerMini
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.FishAndMarineArthropods <|-- ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AquariumAnimals.Predator.Carnivorous
+ArkhitekturaPO.Practocal.Practical05.FishAndCancer.AddAnAnimal.AnimalAdd <|-- ArkhitekturaPO.Practocal.Practical05.FishAndCancer.SpeedOfMarineAnimals.RunningTheBottom.RunBottom
+@enduml
