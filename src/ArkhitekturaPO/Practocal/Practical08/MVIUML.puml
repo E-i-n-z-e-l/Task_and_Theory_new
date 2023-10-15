@@ -1,0 +1,41 @@
+@startuml
+interface ArkhitekturaPO.Seminars.Seminar08.MVI.model.ViewState {
+}
+class ArkhitekturaPO.Seminars.Seminar08.MVI.Main {
++ {static} void main(String[])
+}
+class ArkhitekturaPO.Seminars.Seminar08.MVI.presenter.TasksPresenter {
+- List<Task> tasks
+- BaseView view
++ void dispatch(Intent)
++ void loadTasks()
+}
+interface ArkhitekturaPO.Seminars.Seminar08.MVI.view.BaseView {
+~ void render(ViewState)
+}
+interface ArkhitekturaPO.Seminars.Seminar08.MVI.model.Intent {
+}
+class ArkhitekturaPO.Seminars.Seminar08.MVI.view.ConsoleView {
++ void render(ViewState)
+}
+class ArkhitekturaPO.Seminars.Seminar08.MVI.model.TasksViewState {
+- List<Task> tasks
++ String toString()
+}
+class ArkhitekturaPO.Seminars.Seminar08.MVI.model.Task {
+- String name
+- boolean completed
++ void complete()
++ boolean isCompleted()
++ String toString()
+}
+class ArkhitekturaPO.Seminars.Seminar08.MVI.model.TaskCompletedIntent {
+~ int taskId
++ int getTaskId()
+}
+
+
+ArkhitekturaPO.Seminars.Seminar08.MVI.view.BaseView <|.. ArkhitekturaPO.Seminars.Seminar08.MVI.view.ConsoleView
+ArkhitekturaPO.Seminars.Seminar08.MVI.model.ViewState <|.. ArkhitekturaPO.Seminars.Seminar08.MVI.model.TasksViewState
+ArkhitekturaPO.Seminars.Seminar08.MVI.model.Intent <|.. ArkhitekturaPO.Seminars.Seminar08.MVI.model.TaskCompletedIntent
+@enduml
